@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),  url(../img/cold-bg.jpg) no-repeat center/cover;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.7)),  url(../img/cold.png) no-repeat center/cover;
 }
 
 #weather{
@@ -19,6 +19,7 @@ body{
     border-radius: 10px;
     padding: 30px 20px;
     background-color: gray;
+    background: url(../img/cold.png) no-repeat center/cover;
 }
 
 .search{
@@ -46,4 +47,43 @@ body{
 
 .capital{
     text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
+
+.time{
+    margin: 15px 0 20px 0;
+    font-size: 15px;
+}
+
+.temperature{
+    font-size: 65px;
+    text-shadow: 4px 4px rgba(0,0,0,0.7);
+    background: rgba(225,225,225,0.6);
+    box-shadow: 4px 4px rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 10px;
+    margin: 0 30px;
+    padding: 20px;
+}
+
+.short-desc{
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+    margin: 30px;
+}
+
+.more-desc{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.more-desc div{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.more-desc div i{
+    margin: 5px 0;
 }
