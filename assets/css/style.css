@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),  url(../img/cold-bg.jpg) no-repeat center/cover;
+}
+
+#weather{
+    width: 350px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background-color: gray;
+}
+
+.search{
+    width: 100%;
+    padding: 20px 10px;
+    border: none;
+    outline: none;
+    background: rgba(225,225,225,0.3);
+    border-radius: 0 15px 0 15px;
+    box-shadow: 0 5px 4px rgba(0,0,0,0.2);
+    transition: 0.4s;
+    font-size: 19px;
+}
+
+.search:focus{
+    background: rgba(225,225,225,0.7);
+    border-radius: 15px 0 15px 0;
+}
+
+.content{
+    text-align: center;
+    color: #fff;
+    margin: 40px 0;
+}
+
+.capital{
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
