@@ -11,15 +11,14 @@ body{
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(to bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.7)),  url(../img/cold.png) no-repeat center/cover;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.7));
 }
 
-#weather{
+.weather{
     width: 350px;
     border-radius: 10px;
     padding: 30px 20px;
-    background-color: gray;
-    background: url(../img/cold.png) no-repeat center/cover;
+    /* background-color: gray; */
 }
 
 .search{
@@ -86,4 +85,12 @@ body{
 
 .more-desc div i{
     margin: 5px 0;
+}
+
+.cold{
+    background: url(../img/cold.png) no-repeat center/cover !important;
+}
+
+.hot{
+    background: url(../img/hot.png) no-repeat center/cover !important;
 }

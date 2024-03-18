@@ -10,7 +10,7 @@ var time = document.querySelector('.time')
 
 async function changeWeatherUI(){
     let capitalSearch = search.value.trim()
-    let apiURL = 'https://api.openweathermap.org/data/2.5/weather?q=cairo&units=metric&appid=d78fd1588e1b7c0c2813576ba183a667'
+    let apiURL = 'https://api.openweathermap.org/data/2.5/weather?q='+capitalSearch+'&units=metric&appid=d78fd1588e1b7c0c2813576ba183a667'
     
     let data = await fetch(apiURL).then(res=>res.json())
     console.log(data)
@@ -22,7 +22,7 @@ async function changeWeatherUI(){
     wind.innerText = data.wind.speed +'m/s'
     sun.innerText = data.main.humidity +'%'
     value.innerText = (data.main.temp) 
-    shortDesc.innerText = data.weather[0].main ? weather[0].main :''
+    shortDesc.innerText = data.weather[0].main
     time.innerText = new Date().toLocaleDateString('vi') 
     }else{
         capitalSearch = "ha noi"
@@ -31,8 +31,24 @@ async function changeWeatherUI(){
 
 
 search.addEventListener('keypress',function(e){
-    console.log(e.code == 'Enter')
-    if(e.code == 'Enter'){
-        changeWeatherUI()
+    if(e.code === 'Enter'){
+        changeWeatherUI('AAAAAA')
     }
 })
+
+// Change background
+const weather = document.querySelector('.weather')
+const body = document.querySelector('wrapper')
+
+if(value.innerText >= 25) {
+    weather.classList.add('hot')
+    body.classList.add('hot')
+    weather.classList.remove('cold')
+    body.classList.remove('cold')
+}else{
+    weather.classList.add('cold')
+    body.classList.add('cold')
+    weather.classList.remove('hot')
+    body.classList.remove('hot')
+
+}
