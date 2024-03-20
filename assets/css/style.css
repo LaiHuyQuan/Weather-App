@@ -4,14 +4,20 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
+
+} */
+
+.weather-container{
     font-family: sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
 
     background: linear-gradient(to bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.7));
+    width: 100vw;
+    height: 100vh;
 }
 
 .weather{
@@ -23,7 +29,7 @@ body{
 
 .search{
     width: 100%;
-    padding: 20px 10px;
+    padding: 15px 10px;
     border: none;
     outline: none;
     background: rgba(225,225,225,0.3);
@@ -54,8 +60,8 @@ body{
 }
 
 .temperature{
-    font-size: 65px;
-    text-shadow: 4px 4px rgba(0,0,0,0.7);
+    font-size: 50px;
+    text-shadow: 3px 3px rgba(0,0,0,0.7);
     background: rgba(225,225,225,0.6);
     box-shadow: 4px 4px rgba(0,0,0,0.5);
     border: none;
